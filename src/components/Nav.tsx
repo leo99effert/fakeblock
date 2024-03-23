@@ -7,13 +7,24 @@ export default function Nav() {
     <nav className="bg-blue-800 sticky top-0 font-bold">
       <ul className="h-14 flex justify-evenly items-center text-3xl">
         <li>
-          <Link href="/">Home</Link>
+          <Link className="hover:text-blue-950" href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/profile">Profile</Link>
+          <Link className="hover:text-blue-950" href="/profile">
+            Profile
+          </Link>
         </li>
         <li>
-          <Link href="/login">Login</Link>
+          <Link className="hover:text-blue-950" href="/register">
+            Register
+          </Link>
+        </li>
+        <li>
+          <Link className="hover:text-blue-950" href="/login">
+            Login
+          </Link>
         </li>
       </ul>
     </nav>
