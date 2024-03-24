@@ -6,9 +6,27 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    const user = {
+      email,
+      password,
+    };
+    await fetch("../../api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+  };
+
   return (
     <FormHolder>
-      <form className="flex flex-col gap-4 justify-center items-center">
+      <form
+        onSubmit={onSubmit}
+        className="flex flex-col gap-4 justify-center items-center"
+      >
         <input
           type="text"
           placeholder="Enter email addess..."
