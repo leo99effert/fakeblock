@@ -1,5 +1,3 @@
-import Image from "next/image";
-import logo from "../../public/logo.jpg";
 import Link from "next/link";
 
 export default function Nav() {
